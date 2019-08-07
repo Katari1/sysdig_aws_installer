@@ -25,6 +25,7 @@ function ka() {
   }
 
   #Function for kubectl apply in sysdig-agents namespace
+
 function kaa() {
   kubectl -n sysdig-agents apply -f $1
   }
@@ -35,6 +36,7 @@ function kc() {
   }
 
   #function for kubectl create sysdig-agents
+
 function kca() {
   kubectl -n sysdig-agents create $1
   }
@@ -133,7 +135,7 @@ function cname_manipulation() {
   aws route53 change-resource-record-sets --hosted-zone-id Z26FQOXWCHEUX --change-batch file://cname.json
   }
 
-deploy_agents() {
+function deploy_agents() {
   
   cce=$(grep collector: agents/agent_config.yaml)
   collector_url=$(grep collector.endpoint sysdigcloud/config.yaml | cut -d ':' -f2)
@@ -179,6 +181,55 @@ deploy_agents() {
   broadcast 'w' "It will take about two minutes for the agents to come up...."
   }
 
+function deploy_agents_GKE() {
+
+  cce=$(grep collector: agents/agent_config.yaml)
+  collector_url=$(grep collector.endpoint sysdigcloud/config.yaml | cut -d ':' -f2)
+
+  broadcast 'g' "Deploying Agents"
+  get_api_url
+  broadcast 'p' "Your URL is $api_url"
+  get_access_key
+  broadcast 'p' "Your Access Key is: $accesskey"
+  get_monitor_api_key
+  broadcast 'p' "Your Monitor API Key is: $monitor_api_key"
+  get_secure_api_key
+  broadcast 'p' "Your Secure  API Key is: $secure_api_key"
+
+  broadcast 'g' "Creating Namespace sysdig-agents"
+  kcns sysdig-agents
+
+  broadcast 'g' "Creating Secret for AccessKey"
+  get_access_key
+  kc "-n sysdig-agents secret generic sysdig-agent --from-literal=access-key=$accesskey"
+
+  broadcast 'g' "Fixing Collector Endpoints"
+  sed -i -e "s/$cce/     collector: $collector_url/g" agents/agent_config.yaml
+  
+  broadcast 'g' "Creating GKE User Admin Clusterrole Binding"
+  kubectl create clusterrolebinding your-user-cluster-admin-binding --clusterrole=cluster-admin --user=$1
+
+  broadcast 'g' "Creating Clusterrole"
+  kaa agents/agent_clusterrole.yaml
+
+  broadcast 'g' "Creating sysdig-agent Service Account"
+  kca "serviceaccount sysdig-agent"
+
+  broadcast 'g' "Creating ClusterRoleBinding"
+  kubectl create clusterrolebinding sysdig-agent --clusterrole=sysdig-agent --serviceaccount=sysdig-agents:sysdig-agent
+
+  broadcast 'g' "Deploying Agent Config"
+  kaa agents/agent_config.yaml
+
+  broadcast 'g' "Deploying Agent Service"
+  kaa agents/sysdig-agent-service.yaml
+
+  broadcast 'g' "Deploying Agents"
+  kaa agents/agent_deployment.yaml
+
+  broadcast 'w' "It will take about two minutes for the agents to come up...."
+  }
+
 function deploy_watchtower() {
   get_sysdig_user
   get_sysdig_pass
@@ -199,6 +250,7 @@ function deploy_watchtower() {
   
   broadcast 'w' "Watchtower Dashboards Deployed....."
   }
+
 function deploy_watchtower_v2() {
   get_sysdig_user
   get_sysdig_pass
@@ -266,6 +318,58 @@ function setup_scanning() {
             "notificationChannelIds": []
       }'
    }  
+
+function setup_scanning_2.3_or_greater() {
+  get_api_url
+  get_secure_api_key
+  get_sysdig_user
+  get_sysdig_pass
+  quay_user=$(grep dockerconfigjson: sysdigcloud/pull-secret.yaml | awk {'print $2'} | xargs echo | base64 -d | grep \"auth\": | awk {'print $2}' | cut -d '"' -f2 | base64 -d | cut -d ':' -f1)
+  quay_pass=$(grep dockerconfigjson: sysdigcloud/pull-secret.yaml | awk {'print $2'} | xargs echo | base64 -d | grep \"auth\": | awk {'print $2}' | cut -d '"' -f2 | base64 -d | cut -d ':' -f2)
+
+  #Setting Up anchore-cli
+  export ANCHORE_CLI_SSL_VERIFY=n
+  export ANCHORE_CLI_URL=$api_url/api/scanning/v1/anchore
+  export ANCHORE_CLI_USER=$secure_api_key
+  export ANCHORE_CLI_PASS=
+
+  broadcast 'g' "Adding Quay Registry to Scanning"
+  anchore-cli registry add quay.io $quay_user $quay_pass --skip-validate > /dev/null
+  #anchore-cli repo add couchbase > /dev/null
+  #anchore-cli repo add busybox > /dev/null
+  #anchore-cli repo add nginx > /dev/null
+  #anchore-cli repo add wordpress > /dev/null
+  #anchore-cli repo add couchbas > /dev/null
+  #anchore-cli repo add busybox > /dev/null
+  #anchore-cli repo add nginx > /dev/null
+  #anchore-cli repo add wordpress > /dev/null
+
+  #Create unscanned image alerts.
+  broadcast 'g' "Creating Alert For Unscanned Images"
+  curl --output /dev/null --show-error --fail --silent -k -X POST \
+  $api_url/api/scanning/v1/alerts/ \
+  -H 'Authorization: bearer '$secure_api_key'' \
+  -H 'Content-Type: application/json' \
+  -H 'X-Sysdig-Product: SDS' \
+  -d '{
+        "alertId": null,
+        "autoscan": true,
+        "description": "",
+        "enabled": true,
+        "name": "Scan Unscanned Images",
+        "notificationChannelIds": [],
+        "onlyPassFail": false,
+        "repositories": [],
+        "scope": "",
+        "triggers": {
+          "analysis_update": false,
+          "policy_eval": true,
+          "unscanned": true,
+          "vuln_update": false
+        },
+        "type": "runtime"
+    }'
+   }
 
 function update_falco_rules() {
   get_api_url
@@ -394,3 +498,18 @@ function openshift_prep() {
   oc adm policy add-scc-to-user anyuid -n sysdig-agents -z sysdig-agent
   oc adm policy add-scc-to-user privileged -n sysdig-agents -z sysdig-agent
   }
+
+function generate_elasticsearch_certs() {
+  quay_user=$(grep dockerconfigjson: sysdigcloud/pull-secret.yaml | awk {'print $2'} | xargs echo | base64 -d | grep \"auth\": | awk {'print $2}' | cut -d '"' -f2 | base64 -d | cut -d ':' -f1)
+  quay_pass=$(grep dockerconfigjson: sysdigcloud/pull-secret.yaml | awk {'print $2'} | xargs echo | base64 -d | grep \"auth\": | awk {'print $2}' | cut -d '"' -f2 | base64 -d | cut -d ':' -f2)
+  
+  if [ -d "generated_elasticsearch_certs" ]; then
+	  echo "Elasticsearch Certs Already Exist"
+  else
+    echo "Genearting Elasticsearch Certs"
+    docker login quay.io -u $quay_user -p $quay_pass
+    docker run -d -v "$(pwd)"/generated_elasticsearch_certs:/tools/out quay.io/sysdig/elasticsearch:1.0.1-es-certs
+    sleep 10s
+  fi
+  }
+

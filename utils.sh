@@ -12,14 +12,16 @@ function print_menu() {
   broadcast 'g' "6.  Update CNAME Records"
   broadcast 'g' "7.  Fix Ingress Files"
   broadcast 'g' "8.  Setup Scanning"
-  broadcast 'g' "9.  Update Falco Rules"
-  broadcast 'g' "10.  Prep Cluster For Openshift"
+  broadcast 'g' "9.  Setup Scanning 2.3.0 Or Greater"
+  broadcast 'g' "10.  Update Falco Rules"
+  broadcast 'g' "11.  Prep Cluster For Openshift"
+  broadcast 'g' "12.  Deploy Agent GKE"
 }
 
 function read_input() {
   broadcast 'r' "Enter Selection"
   read input
- while [[ -n ${input//[0-9]/} ]] || [[ "$input" -gt 10 ]]; do
+ while [[ -n ${input//[0-9]/} ]] || [[ "$input" -gt 12 ]]; do
     broadcast 'r'  "Please enter a valid Selection"
     broadcast 'r' "Enter Selection"
     read input
@@ -45,9 +47,13 @@ function process_input() {
   elif [[ $input -eq 8 ]]; then
     setup_scanning
   elif [[ $input -eq 9 ]]; then
-    update_falco_rules
+    setup_scanning_2.3_or_greater	  
   elif [[ $input -eq 10 ]]; then
+    update_falco_rules
+  elif [[ $input -eq 11 ]]; then
     openshift_prep
+  elif [[ $input -eq 12 ]]; then
+    deploy_agents_GKE vikram.nagrani@sysdig.com
   fi
 }
 
@@ -57,7 +63,7 @@ function main() {
     print_menu
     read_input
     process_input $input
-  elif [[ -n ${input//[0-9]/} ]] || [[ "$input" -gt 10 ]]; then
+  elif [[ -n ${input//[0-9]/} ]] || [[ "$input" -gt 11 ]]; then
     broadcast 'r' "You did not provide a valid option"
   else
     process_input $input
