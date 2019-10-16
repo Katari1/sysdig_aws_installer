@@ -1,0 +1,361 @@
+{
+  "dashboard": {
+    "autoCreated": false,
+    "filterExpression": "kubernetes.namespace.name = \"sysdigcloud\"",
+    "modifiedOn": 1552308640000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operand": "kubernetes.namespace.name",
+        "isVariable": false,
+        "__isPlaceholder__": false,
+        "operator": "equals"
+      }
+    ],
+    "items": [
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Workers JVM Heap Used",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.used",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "jvm.heap.committed",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 1
+        },
+        "scope": "kubernetes.pod.label.role in (\"worker\")",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Collectors JVM Heap Used",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.used",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "jvm.heap.committed",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 5
+        },
+        "scope": "kubernetes.pod.label.role in (\"collector\")",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra JVM Used",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.used",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "jvm.heap.committed",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "metricId": "jvm.nonHeap.committed",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 1
+        },
+        "scope": "kubernetes.pod.label.role in (\"cassandra\")",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Elasticsearch JVM Heap Used",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.used",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "jvm.heap.committed",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 5
+        },
+        "scope": "kubernetes.pod.label.role in (\"elasticsearch\")",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "API JVM Heap Used",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.used",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "jvm.heap.committed",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 9
+        },
+        "scope": "kubernetes.pod.label.role in (\"api\")",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      }
+    ],
+    "createdOn": 1552308510000,
+    "isPublic": false,
+    "name": "Sysdig JVM Heap Used Dashboard",
+    "username": "test@sysdig.com",
+    "teamId": 1,
+    "layout": [
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 1,
+        "row": 1
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 7,
+        "row": 5
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 7,
+        "row": 1
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 1,
+        "row": 5
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 1,
+        "row": 9
+      }
+    ],
+    "schema": 1,
+    "isShared": false
+  }
+}

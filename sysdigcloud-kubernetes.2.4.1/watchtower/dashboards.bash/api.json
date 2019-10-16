@@ -1,0 +1,2290 @@
+{
+  "dashboard": {
+    "autoCreated": false,
+    "filterExpression": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+    "modifiedOn": 1552308815000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operand": "kubernetes.namespace.name",
+        "isVariable": false,
+        "__isPlaceholder__": false,
+        "operator": "equals"
+      },
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud-api"
+        ],
+        "operand": "kubernetes.deployment.name",
+        "isVariable": false,
+        "__isPlaceholder__": false,
+        "operator": "equals"
+      }
+    ],
+    "name": "Sysdig API",
+    "items": [
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": [
+            {
+              "color": "best",
+              "max": null,
+              "min": 2
+            },
+            {
+              "color": "ok",
+              "max": 2,
+              "min": 1
+            },
+            {
+              "color": "worst",
+              "max": 1,
+              "min": null
+            }
+          ]
+        },
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Available Replicas",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.deployment.replicas.available",
+            "metricFormattingDecimals": null,
+            "aggregation": "min",
+            "groupAggregation": "min"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 1,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "CPU Quota % by Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.quota.used.percent",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 8
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "CPU Cores Used By Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.cores.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "max",
+            "groupAggregation": "max"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 8
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "JVM Heap Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 14
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "JVM Heap Committed",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.committed",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 14
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes Total Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.total",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 20
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Memory Used by Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "memory.bytes.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 11
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes OUT Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.out",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 20
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes IN Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.in",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 20
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "CPU cores used",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.cores.used",
+            "aggregation": "avg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 5,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Network Connections",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "net.connection.count.total",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 9,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Network Bytes",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.total",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 11,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Memory Usage %",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "memory.used.percent",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 3,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "CPU Quota Used %",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.quota.used.percent",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 7,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Deployment Replicas Desired/Available/Unavailable",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.deployment.replicas.desired",
+            "metricFormattingDecimals": null,
+            "aggregation": "min",
+            "groupAggregation": "min"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "kubernetes.deployment.replicas.available",
+            "aggregation": "min",
+            "groupAggregation": "min"
+          },
+          {
+            "propertyName": "v2",
+            "metricId": "kubernetes.deployment.replicas.unavailable",
+            "aggregation": "max",
+            "groupAggregation": "max"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 4
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes Total By Port",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "net.server.port"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.total",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 23
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes IN Total Per Port",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "net.server.port"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.in",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 23
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes OUT Total By Port",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "net.server.port"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.out",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 23
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "15",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "CPU Cores Limit vs Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.pod.resourceLimits.cpuCores",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "cpu.cores.used",
+            "aggregation": "max",
+            "groupAggregation": "max"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 8
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Deployment Replicas Available",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.deployment.replicas.available",
+            "metricFormattingDecimals": null,
+            "aggregation": "min",
+            "groupAggregation": "min"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 4
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Memory Limit vs Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "memory.limit.bytes",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "memory.bytes.used",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 11
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Memory Used % by Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "container.label.io.kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "memory.limit.used.percent",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 11
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "JVM Non-Heap Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.nonHeap.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 14
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Data Read Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.querystats.size_total",
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 26
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Data Read Per API",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.querystats.size_total",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 26
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Active Sessions Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.session_repository_active_sessions",
+            "metricFormattingDecimals": null,
+            "aggregation": "max",
+            "groupAggregation": "max"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 29
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Active Sessions Per API",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.session_repository_active_sessions",
+            "metricFormattingDecimals": null,
+            "aggregation": "max",
+            "groupAggregation": "max"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 29
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Active Users Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.session_repository_active_users",
+            "metricFormattingDecimals": null,
+            "aggregation": "max",
+            "groupAggregation": "max"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 29
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "net requests by URL",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "net.http.url"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.request.time",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 32
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Custom Events Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.events_received_total",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 32
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Events recieved",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.events_received",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 32
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Data Read Per API",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.querystats.size_total",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 26
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "SDC gc.ParNew.Count",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ParNew.count",
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 17
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "SDC gc.ParNew.Time",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ParNew.time",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 17
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "SDC gc.concourrentMarkSweep.time",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ConcurrentMarkSweep.time",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 17
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.deployment.name = \"sysdigcloud-api\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      }
+    ],
+    "createdOn": 1552308510000,
+    "isPublic": false,
+    "eventsFilter": {
+      "showNotificationsEnabled": false,
+      "filterNotificationsResolvedFilter": "all",
+      "eventOverlayLimit": 1000,
+      "filterNotificationsStateFilter": "all",
+      "filterNotificationsSeverityFilter": "all",
+      "filterNotificationsUserInputFilter": "",
+      "showNotificationsDoNotFilterSameMetrics": false,
+      "filterNotificationsTypeFilter": "all",
+      "showNotificationsDoNotFilterSameScope": false
+    },
+    "username": "test@sysdig.com",
+    "teamId": 1,
+    "layout": [
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 1,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 8
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 8
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 14
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 14
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 20
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 11
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 20
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 20
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 5,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 9,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 11,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 3,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 7,
+        "row": 1
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 1,
+        "row": 4
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 23
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 23
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 23
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 8
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 7,
+        "row": 4
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 11
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 11
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 14
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 26
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 26
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 29
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 29
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 29
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 32
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 32
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 32
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 26
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 17
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 17
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 17
+      }
+    ],
+    "schema": 1,
+    "isShared": false
+  }
+}

@@ -1,0 +1,3260 @@
+{
+  "dashboard": {
+    "autoCreated": false,
+    "filterExpression": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+    "modifiedOn": 1552309006000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operand": "kubernetes.namespace.name",
+        "isVariable": false,
+        "__isPlaceholder__": false,
+        "operator": "equals"
+      },
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud-cassandra"
+        ],
+        "operand": "kubernetes.statefulSet.name",
+        "isVariable": false,
+        "__isPlaceholder__": false,
+        "operator": "equals"
+      }
+    ],
+    "name": "Sysdig Cassandra",
+    "items": [
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": [
+            {
+              "color": "best",
+              "max": null,
+              "min": 2
+            },
+            {
+              "color": "ok",
+              "max": 2,
+              "min": 1
+            },
+            {
+              "color": "worst",
+              "max": 1,
+              "min": null
+            }
+          ]
+        },
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Available Replicas",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.statefulSet.status.replicas.ready",
+            "metricFormattingDecimals": null,
+            "aggregation": "min",
+            "groupAggregation": "min"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 1,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "CPU quota used % by Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.quota.used.percent",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 12
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "CPU Cores Used By Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.cores.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 12
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "JVM Heap Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 18
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "JVM Heap Committed",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.heap.committed",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 18
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes Total Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.total",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 24
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Memory Used by Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "memory.bytes.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes OUT Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.out",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 24
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes IN Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.in",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 24
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": [
+            {
+              "color": "best",
+              "max": 134,
+              "min": null
+            },
+            {
+              "color": "ok",
+              "max": 151,
+              "min": 134
+            },
+            {
+              "color": "worst",
+              "max": null,
+              "min": 151
+            }
+          ]
+        },
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "CPU cores used",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.cores.used",
+            "aggregation": "avg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 5,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Network Connections",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "net.connection.count.total",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 9,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Network Bytes",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.total",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 11,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Memory Usage %",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "memory.used.percent",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 3,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\""
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": [
+            {
+              "color": "best",
+              "max": 75,
+              "min": null
+            },
+            {
+              "color": "ok",
+              "max": 90,
+              "min": 75
+            },
+            {
+              "color": "worst",
+              "max": null,
+              "min": 90
+            }
+          ]
+        },
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "CPU Quota Used %",
+        "overrideFilter": false,
+        "showAsType": "summary",
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "cpu.quota.used.percent",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 7,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\""
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes Total By Port",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "net.server.port"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.total",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 27
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes IN Total Per Port",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "net.server.port"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.in",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 27
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Net Bytes OUT Total By Port",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "net.server.port"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.out",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 27
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "15",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "CPU Cores Limit vs Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.pod.resourceLimits.cpuCores",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "cpu.cores.used",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 12
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Memory Limit vs Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "memory.limit.bytes",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "memory.bytes.used",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Memory Used % by Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "container.label.io.kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "memory.limit.used.percent",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "JVM Non-Heap Used",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.nonHeap.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 18
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Statefulset Desired/Current/Ready",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.statefulSet.replicas",
+            "metricFormattingDecimals": null,
+            "aggregation": "min",
+            "groupAggregation": "min"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "kubernetes.statefulSet.status.replicas.current",
+            "aggregation": "min",
+            "groupAggregation": "min"
+          },
+          {
+            "propertyName": "v2",
+            "metricId": "kubernetes.statefulSet.status.replicas.ready",
+            "aggregation": "min",
+            "groupAggregation": "min"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 8
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Statefulset Ready",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "kubernetes.statefulSet.status.replicas.ready",
+            "metricFormattingDecimals": null,
+            "aggregation": "min",
+            "groupAggregation": "min"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 8
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Compactions Count/Pending",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.compactions.pending",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "sum"
+          },
+          {
+            "propertyName": "v1",
+            "metricId": "cassandra.compactions.count",
+            "aggregation": "avg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Backend-to-Cassandra Retries",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.cassandra_retries",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 36
+        },
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Backend-to-Cassandra Speculative Executions",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.cassandra_speculative_executions",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 36
+        },
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Backend-to-Cassandra Queries-in-Flight",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.cassandra_in_flight_queries",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 36
+        },
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Backend-to-Cassandra Write Timeouts",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.cassandra_write_timeouts",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 39
+        },
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Backend-to-Cassandra Read Timeouts",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.cassandra_read_timeouts",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 39
+        },
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Backend-to-Cassandra Timeouts",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "sysdigcloud-backend.cassandra_client_timeouts",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 39
+        },
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Cassandra Pending Compactions Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.compactions.pending",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Compactions Bytes",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.compactions.bytes",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Writes Dropped",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.counter.mutation.dropped",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 42
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Reads Pending",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.read.pending",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 42
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Reads Dropped",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.read.dropped",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 42
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Read Latency Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.read.latency",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 45
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Reads Pending Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.read.pending",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 45
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Read Per Sec Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.read.count",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 45
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Writes Pending",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.write.pending",
+            "metricFormattingDecimals": null,
+            "aggregation": "sum",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 48
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Cassandra Write Latency Per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.write.latency",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 48
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Cassandra Writes/s per Pod",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.write.count",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 48
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Writes per Sec",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.write.count",
+            "metricFormattingDecimals": null,
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 51
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "Disk Usage by Pod",
+        "format": {
+          "hierarchical": false
+        },
+        "overrideFilter": true,
+        "showAsType": "table",
+        "showAs": "table",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "host.hostName"
+          },
+          {
+            "propertyName": "k2",
+            "metricId": "fs.mountDir"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "fs.bytes.used",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 12,
+          "col": 1,
+          "row": 4
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\" and kubernetes.pod.name contains \"sysdigcloud-cassandra\" and fs.mountDir contains \"/var/lib/cassandra\"",
+        "paging": null
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "SDC gc.ParNew.Count",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ParNew.count",
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 21
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "SDC gc.ParNew.Time",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ParNew.time",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 21
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "SDC gc.concourrentMarkSweep.time",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ConcurrentMarkSweep.time",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 21
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "File Bytes Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "file.bytes.total",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 30
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "File IOPS Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "file.iops.total",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 30
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": "50",
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "File Time Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "file.time.total",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 30
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "Cassandra Write Latency Total",
+        "overrideFilter": false,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "cassandra.write.latency",
+            "metricFormattingDecimals": null,
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 51
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-cassandra\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      }
+    ],
+    "createdOn": 1552308511000,
+    "isPublic": false,
+    "eventsFilter": {
+      "showNotificationsEnabled": false,
+      "filterNotificationsResolvedFilter": "all",
+      "eventOverlayLimit": 1000,
+      "filterNotificationsStateFilter": "all",
+      "filterNotificationsSeverityFilter": "all",
+      "filterNotificationsUserInputFilter": "",
+      "showNotificationsDoNotFilterSameMetrics": false,
+      "filterNotificationsTypeFilter": "all",
+      "showNotificationsDoNotFilterSameScope": false
+    },
+    "username": "test@sysdig.com",
+    "teamId": 1,
+    "layout": [
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 1,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 12
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 12
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 18
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 18
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 24
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 15
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 24
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 24
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 5,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 9,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 11,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 3,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 2,
+        "col": 7,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 27
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 27
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 27
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 12
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 15
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 15
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 18
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 1,
+        "row": 8
+      },
+      {
+        "size_y": 4,
+        "size_x": 6,
+        "col": 7,
+        "row": 8
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 33
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 36
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 36
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 36
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 39
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 39
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 39
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 33
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 33
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 42
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 42
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 42
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 45
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 45
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 45
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 48
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 48
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 48
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 51
+      },
+      {
+        "size_y": 4,
+        "size_x": 12,
+        "col": 1,
+        "row": 4
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 21
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 21
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 21
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 30
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 30
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 30
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 51
+      }
+    ],
+    "schema": 1,
+    "isShared": false
+  }
+}

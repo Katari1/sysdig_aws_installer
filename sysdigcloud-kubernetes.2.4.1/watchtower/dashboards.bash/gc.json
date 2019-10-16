@@ -1,0 +1,293 @@
+{
+  "dashboard": {
+    "autoCreated": false,
+    "filterExpression": "kubernetes.namespace.name = \"sysdigcloud\"",
+    "modifiedOn": 1552309486000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operand": "kubernetes.namespace.name",
+        "isVariable": false,
+        "__isPlaceholder__": false,
+        "operator": "equals"
+      }
+    ],
+    "items": [
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "SDC gc.ParNew.Count",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ParNew.count",
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 1
+        },
+        "scope": "container.image contains \"sysdigcloud-backend\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "SDC gc.ParNew.Time",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "container.image"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ParNew.time",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 1
+        },
+        "scope": "container.image contains \"sysdigcloud-backend\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "sorting": [
+          {
+            "mode": "desc"
+          }
+        ],
+        "name": "SDC gc.concourrentMarkSweep.count",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "metricId": "container.image"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ConcurrentMarkSweep.count",
+            "aggregation": "timeAvg",
+            "groupAggregation": "sum"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 1
+        },
+        "scope": "container.image contains \"sysdigcloud-\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      },
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "name": "SDC gc.concourrentMarkSweep.time",
+        "overrideFilter": true,
+        "showAsType": "line",
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "metricId": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "metricId": "jvm.gc.ConcurrentMarkSweep.time",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": false,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 4
+        },
+        "scope": "container.image contains \"sysdigcloud-backend\"",
+        "paging": {
+          "to": 9,
+          "from": 0
+        }
+      }
+    ],
+    "createdOn": 1552308508000,
+    "isPublic": false,
+    "name": "Sysdig Garbage Colledction Details",
+    "username": "test@sysdig.com",
+    "teamId": 1,
+    "layout": [
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 5,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 9,
+        "row": 1
+      },
+      {
+        "size_y": 3,
+        "size_x": 4,
+        "col": 1,
+        "row": 4
+      }
+    ],
+    "schema": 1,
+    "isShared": false
+  }
+}

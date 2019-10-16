@@ -377,7 +377,7 @@ function update_falco_rules() {
   get_sysdig_pass
 
   broadcast 'g' "Updating Falco Rules"
-  docker run --rm --name falco-rules-installer -it -e DEPLOY_HOSTNAME=$api_url -e DEPLOY_USER_NAME=$sysdigcloud_user -e DEPLOY_USER_PASSWORD=$sysdigcloud_pass -e VALIDATE_RULES=yes -e DEPLOY_RULES=yes -e CREATE_NEW_POLICIES=no -e SDC_SSL_VERIFY=false sysdig/falco_rules_installer:latest &>/dev/null
+  docker run --rm --name falco-rules-installer -it -e DEPLOY_HOSTNAME=$api_url -e DEPLOY_USER_NAME=$sysdigcloud_user -e DEPLOY_USER_PASSWORD=$sysdigcloud_pass -e VALIDATE_RULES=yes -e DEPLOY_RULES=yes -e CREATE_NEW_POLICIES=yes -e SDC_SSL_VERIFY=false sysdig/falco_rules_installer:latest &>/dev/null
   broadcast 'w' "Falo Rules Updated...."
   }
 
@@ -508,7 +508,8 @@ function generate_elasticsearch_certs() {
   else
     echo "Genearting Elasticsearch Certs"
     docker login quay.io -u $quay_user -p $quay_pass
-    docker run -d -v "$(pwd)"/generated_elasticsearch_certs:/tools/out quay.io/sysdig/elasticsearch:1.0.1-es-certs
+    #docker run -d -v "$(pwd)"/generated_elasticsearch_certs:/tools/out quay.io/sysdig/elasticsearch:1.0.1-es-certs
+    mkdir -p generated_elasticsearch_certs; docker run -d --rm --user $(id -u) -v "$(pwd)"/generated_elasticsearch_certs:/tools/out quay.io/sysdig/elasticsearch:1.0.1-es-certs
     sleep 10s
   fi
   }

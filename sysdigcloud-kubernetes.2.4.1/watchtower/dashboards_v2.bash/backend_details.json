@@ -1,0 +1,746 @@
+{
+  "version": "v2",
+  "dashboard": {
+    "autoCreated": false,
+    "username": "test@sysdig.com",
+    "domain": null,
+    "modifiedOn": 1557947324000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operator": "equals",
+        "isVariable": false,
+        "variable": false,
+        "operand": "kubernetes.namespace.name"
+      }
+    ],
+    "publicToken": null,
+    "createdOn": 1557946440000,
+    "eventsOverlaySettings": {
+      "showNotificationsEnabled": true,
+      "filterNotificationsResolvedFilter": "all",
+      "eventOverlayLimit": 1000,
+      "filterNotificationsStateFilter": "all",
+      "filterNotificationsSeverityFilter": "all",
+      "filterNotificationsUserInputFilter": "",
+      "filterNotificationsTypeFilter": "all"
+    },
+    "userId": 2,
+    "public": false,
+    "teamId": 1,
+    "widgets": [
+      {
+        "overrideScope": false,
+        "name": "SDC Distributed jobs distribution time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.distributed_jobs.distribution_time_ms",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Commands Received",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.commands_received",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Snapshots Count",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "sum",
+            "id": "sysdigcloud-backend.snapshots.count",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Containers Received",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.containers_received",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 4
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Distributed Jobs Processing Time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "sysdigcloud-backend.distributed_jobs.processing_time_ms",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 4
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Elasticsearch Write durations",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.elasticsearch_write_commands_durations",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 4
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Snapshot Calculation Delay",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.snapshots.calculation_delay_sec",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 7
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC protobufs received",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.protobufs_received",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 7
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Snapshot calculations delay",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.snapshots.calculation_delay_sec",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 7
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Distributed Jobs Wait Time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.distributed_jobs.wait_time_ms",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 10
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Distributed Jobs Processing Time 2",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.distributed_jobs.processing_time_ms",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 10
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Cassandra Client Timeouts",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.cassandra_client_timeouts",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 10
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Alert Check Delay",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "sysdigcloud-backend.alerts.check_delay_sec",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 13
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Cassandra Client Timeout",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.cassandra_client_timeouts",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 13
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC Cassandra Client Timeouts 2",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "sysdigcloud-backend.cassandra_client_timeouts",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 13
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      }
+    ],
+    "shared": false,
+    "schema": 2,
+    "customerId": 1,
+    "name": "Sysdig Backend Details"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "dashboard": {
+    "autoCreated": false,
+    "filterExpression": "kubernetes.namespace.name = \"sysdigcloud\"",
+    "modifiedOn": 1552308714000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operand": "kubernetes.namespace.name",
+        "isVariable": false,
+        "__isPlaceholder__": false,
+        "operator": "equals"
+      }
+    ],
+    "items": [
+      {
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "group": {
+          "configuration": {
+            "groups": [
+              {
+                "groupBy": [
+                  {
+                    "metric": "container.image"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "name": "Network Traffic",
+        "format": {
+          "hierarchical": true
+        },
+        "overrideFilter": true,
+        "showAsType": "map",
+        "linkMetrics": [
+          {
+            "metricId": "net.bytes.total",
+            "aggregation": "avg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "showAs": "map",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "metricId": "net.bytes.total",
+            "aggregation": "timeAvg",
+            "groupAggregation": "avg"
+          }
+        ],
+        "limitToScope": true,
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 10,
+          "size_x": 12,
+          "col": 1,
+          "row": 1
+        }
+      }
+    ],
+    "createdOn": 1552308509000,
+    "isPublic": false,
+    "name": "SDC Network Topology",
+    "username": "test@sysdig.com",
+    "teamId": 1,
+    "layout": [
+      {
+        "size_y": 10,
+        "size_x": 12,
+        "col": 1,
+        "row": 1
+      }
+    ],
+    "schema": 1,
+    "isShared": false
+  }
+}

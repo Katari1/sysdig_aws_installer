@@ -1,0 +1,1800 @@
+{
+  "version": "v2",
+  "dashboard": {
+    "autoCreated": false,
+    "username": "test@sysdig.com",
+    "domain": null,
+    "modifiedOn": 1557947032000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operator": "equals",
+        "isVariable": false,
+        "variable": false,
+        "operand": "kubernetes.namespace.name"
+      },
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud-elasticsearch"
+        ],
+        "operator": "equals",
+        "isVariable": false,
+        "variable": false,
+        "operand": "kubernetes.statefulSet.name"
+      }
+    ],
+    "publicToken": null,
+    "createdOn": 1557946443000,
+    "eventsOverlaySettings": {
+      "showNotificationsEnabled": false,
+      "filterNotificationsResolvedFilter": "all",
+      "eventOverlayLimit": 1000,
+      "filterNotificationsStateFilter": "all",
+      "filterNotificationsSeverityFilter": "all",
+      "filterNotificationsUserInputFilter": "",
+      "filterNotificationsTypeFilter": "all"
+    },
+    "userId": 2,
+    "public": false,
+    "teamId": 1,
+    "widgets": [
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 4,
+            "best": 5
+          }
+        },
+        "overrideScope": false,
+        "name": "Replica Count",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "min",
+            "id": "kubernetes.statefulSet.status.replicas.ready",
+            "groupAggregation": "min"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 1,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "CPU Quota Used % by POD",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "cpu.quota.used.percent",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 12
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "CPU Cores Used by POD",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "cpu.cores.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 12
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "JVM Heap Used",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "jvm.heap.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "JVM Non-Heap Used",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "jvm.nonHeap.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Net Bytes Total per pod",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "net.bytes.total",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 21
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Memory Used by Host",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "memory.bytes.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Net Bytes OUT per pod",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "net.bytes.out",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 21
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Net Bytes IN per pod",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "net.bytes.in",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 21
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 368,
+            "best": 326
+          }
+        },
+        "overrideScope": false,
+        "name": "CPU cores used",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "cpu.cores.used",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 5,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Network Connections",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "net.connection.count.total",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 9,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Network Bytes",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "net.bytes.total",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 11,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Memory Usage %",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "memory.used.percent",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 3,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "CPU Quota Used %",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "cpu.quota.used.percent",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 7,
+          "row": 1
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Number of Shards",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "elasticsearch.active_shards",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "timeAvg",
+            "id": "elasticsearch.unassigned_shards",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 27
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Network Bytes Activity",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "net.bytes.total",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 27
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Query Latency",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "elasticsearch.search.query.time",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "timeAvg",
+            "id": "elasticsearch.search.fetch.time",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 27
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "docs growth",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "elasticsearch.docs.growth",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 30
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Indexing Time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "elasticsearch.indexing.index.time",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 30
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Index Memory Size",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "elasticsearch.store.size",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 30
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Number of Nodes",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "elasticsearch.number_of_nodes",
+            "groupAggregation": "max"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 1,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Active primary shards",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "elasticsearch.active_primary_shards",
+            "groupAggregation": "max"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 3,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Active shards",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "elasticsearch.active_shards",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 5,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Number of docs",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "elasticsearch.docs.count",
+            "groupAggregation": "max"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 7,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Pending tasks",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "elasticsearch.pending_tasks_total",
+            "groupAggregation": "max"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 11,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "Docs deleted",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "elasticsearch.docs.deleted",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 2,
+          "col": 9,
+          "row": 33
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Statefulset Desired/Running/Ready",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.statefulSet.replicas",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "kubernetes.statefulSet.status.replicas.current",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "kubernetes.statefulSet.status.replicas.ready",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 8
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": true,
+        "name": "Disk Usage by Pod",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "table",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "k1",
+            "id": "host.hostName"
+          },
+          {
+            "propertyName": "k2",
+            "id": "fs.mountDir"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "fs.bytes.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 12,
+          "col": 1,
+          "row": 4
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\" and fs.mountDir = \"/usr/share/elasticsearch/data\""
+      },
+      {
+        "overrideScope": false,
+        "name": "CPU Cores Limit vs Used",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 15,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.pod.resourceLimits.cpuCores",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "cpu.cores.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 12
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Statefulset Ready",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "min",
+            "id": "kubernetes.statefulSet.status.replicas.ready",
+            "groupAggregation": "min"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 8
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC gc.ParNew.Count",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "jvm.gc.ParNew.count",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 18
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC gc.ParNew.Time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "jvm.gc.ParNew.time",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 18
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "SDC gc.concourrentMarkSweep.time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "jvm.gc.ConcurrentMarkSweep.time",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 18
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "File Bytes Total",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 50,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "file.bytes.total",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 1,
+          "row": 24
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "File IOPS Total",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 50,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "file.iops.total",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 5,
+          "row": 24
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      },
+      {
+        "overrideScope": false,
+        "name": "File Time Total",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 50,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.pod.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "file.time.total",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 3,
+          "size_x": 4,
+          "col": 9,
+          "row": 24
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\" and kubernetes.statefulSet.name = \"sysdigcloud-elasticsearch\""
+      }
+    ],
+    "shared": false,
+    "schema": 2,
+    "customerId": 1,
+    "name": "Sysdig Elasticsearch"
+  }
+}

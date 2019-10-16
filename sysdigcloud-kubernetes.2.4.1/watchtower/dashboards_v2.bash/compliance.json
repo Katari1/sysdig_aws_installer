@@ -1,0 +1,789 @@
+{
+  "version": "v2",
+  "dashboard": {
+    "autoCreated": false,
+    "username": "test@sysdig.com",
+    "domain": null,
+    "modifiedOn": 1557945609000,
+    "scopeExpressionList": null,
+    "publicToken": null,
+    "createdOn": 1557945609000,
+    "eventsOverlaySettings": {
+      "showNotificationsEnabled": true,
+      "filterNotificationsResolvedFilter": "all",
+      "eventOverlayLimit": 1000,
+      "filterNotificationsStateFilter": "all",
+      "filterNotificationsSeverityFilter": "all",
+      "filterNotificationsUserInputFilter": "",
+      "filterNotificationsTypeFilter": "all"
+    },
+    "userId": 2,
+    "public": false,
+    "teamId": 1,
+    "widgets": [
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 10,
+            "best": 80
+          }
+        },
+        "overrideScope": false,
+        "name": "Overall Pass %",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.pass_pct",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": {
+          "periodTypeId": "day",
+          "periodCount": 1
+        },
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Overall Pass % Over Time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": 100,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.pass_pct",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Pass % By Section",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.1.api-server.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.2.scheduler.pass_pct",
+            "groupAggregation": "max"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.3.controller-manager.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v3",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.4.configure-files.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v4",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.5.etcd.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v5",
+            "timeAggregation": "max",
+            "id": "compliance.k8s-bench.1.6.general-security-primitives.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v6",
+            "timeAggregation": "max",
+            "id": "compliance.k8s-bench.2.1.kubelet.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v7",
+            "timeAggregation": "max",
+            "id": "compliance.k8s-bench.2.2.configuration-files.pass_pct",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 5
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Pass % By Section Over Time",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": 100,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.1.api-server.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.2.scheduler.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.3.controller-manager.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v3",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.4.configure-files.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v4",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.5.etcd.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v5",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.6.general-security-primitives.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v6",
+            "timeAggregation": "max",
+            "id": "compliance.k8s-bench.2.1.kubelet.pass_pct",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v7",
+            "timeAggregation": "max",
+            "id": "compliance.k8s-bench.2.2.configuration-files.pass_pct",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 5
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (1.1 - API Server)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.1.api-server.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.1.api-server.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.1.api-server.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 9
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (Overall)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 9
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (1.3 - Controller Manager)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.3.controller-manager.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.3.controller-manager.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.3.controller-manager.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 13
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (1.2 - Scheduler)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.2.scheduler.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.2.scheduler.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.2.scheduler.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 13
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (1.5 - Etcd)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.5.etcd.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.5.etcd.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.5.etcd.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 17
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (1.4 - Configure Files)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.4.configure-files.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.4.configure-files.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.4.configure-files.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 17
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (1.6 - General Security Primitives)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.6.general-security-primitives.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.6.general-security-primitives.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.1.6.general-security-primitives.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 21
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (2.1 - Kubelet)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.2.1.kubelet.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.2.1.kubelet.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.2.1.kubelet.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 21
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Test Details (2.2 - Configuration Files)",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "top",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.2.2.configuration-files.tests_pass",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.2.2.configuration-files.tests_warn",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "compliance.k8s-bench.2.2.configuration-files.tests_fail",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 25
+        },
+        "scope": null
+      }
+    ],
+    "shared": false,
+    "schema": 2,
+    "customerId": 1,
+    "name": "Compliance (K8s)"
+  }
+}

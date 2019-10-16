@@ -1,0 +1,1240 @@
+{
+  "version": "v2",
+  "dashboard": {
+    "autoCreated": false,
+    "username": "test@sysdig.com",
+    "domain": null,
+    "modifiedOn": 1557947065000,
+    "scopeExpressionList": [
+      {
+        "displayName": "",
+        "value": [
+          "sysdigcloud"
+        ],
+        "operator": "equals",
+        "isVariable": false,
+        "variable": false,
+        "operand": "kubernetes.namespace.name"
+      }
+    ],
+    "publicToken": null,
+    "createdOn": 1557946441000,
+    "eventsOverlaySettings": {
+      "showNotificationsEnabled": false,
+      "filterNotificationsResolvedFilter": "all",
+      "eventOverlayLimit": 1000,
+      "filterNotificationsStateFilter": "all",
+      "filterNotificationsSeverityFilter": "all",
+      "filterNotificationsUserInputFilter": "",
+      "filterNotificationsTypeFilter": "all"
+    },
+    "userId": 2,
+    "public": false,
+    "teamId": 1,
+    "widgets": [
+      {
+        "overrideScope": false,
+        "name": "Pods Desired/Available/Unavailable",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "min",
+            "id": "kubernetes.deployment.replicas.desired",
+            "groupAggregation": "sum"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "min",
+            "id": "kubernetes.deployment.replicas.unavailable",
+            "groupAggregation": "sum"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "min",
+            "id": "kubernetes.deployment.replicas.available",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 1,
+          "row": 7
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Pods Unavailable by Deployment",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.deployment.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "min",
+            "id": "kubernetes.deployment.replicas.unavailable",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 5,
+          "row": 7
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Daemonset Desired/Scheduled",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "min",
+            "id": "kubernetes.daemonSet.pods.desired",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "min",
+            "id": "kubernetes.daemonSet.pods.scheduled",
+            "groupAggregation": "min"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 1,
+          "row": 11
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Pods Paused By NameSpace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeriesArea",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "kubernetes.deployment.replicas.paused",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 9,
+          "row": 7
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Pod Restarts by Namespace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.namespace.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "kubernetes.pod.restart.count",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 9,
+          "row": 3
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Pod Status Summary",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "table",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "kubernetes.namespace.name"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.deployment.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.deployment.replicas.running",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v1",
+            "timeAggregation": "avg",
+            "id": "kubernetes.deployment.replicas.available",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v2",
+            "timeAggregation": "avg",
+            "id": "kubernetes.deployment.replicas.desired",
+            "groupAggregation": "avg"
+          },
+          {
+            "propertyName": "v3",
+            "timeAggregation": "avg",
+            "id": "kubernetes.deployment.replicas.unavailable",
+            "groupAggregation": "avg"
+          }
+        ],
+        "gridConfiguration": {
+          "size_y": 5,
+          "size_x": 12,
+          "col": 1,
+          "row": 23
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Pod Restart By Deployment",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 50,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.deployment.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "kubernetes.pod.restart.count",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 1,
+          "row": 3
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 2,
+            "best": 1
+          }
+        },
+        "overrideScope": true,
+        "name": "No. of Nodes Unschedulable",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.node.unschedulable",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 2,
+          "col": 3,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 19,
+            "best": 20
+          }
+        },
+        "overrideScope": true,
+        "name": "No. of Ready Nodes",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "kubernetes.node.ready",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 2,
+          "col": 1,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "Pod Restart By Statefulset",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 50,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.statefulSet.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "kubernetes.pod.restart.count",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 5,
+          "row": 3
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Daemonset Ready",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "min",
+            "id": "kubernetes.daemonSet.pods.ready",
+            "groupAggregation": "min"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 6,
+          "col": 7,
+          "row": 11
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 2,
+            "best": 1
+          }
+        },
+        "overrideScope": true,
+        "name": "No. of Nodes MemoryPressure",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.node.memoryPressure",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 2,
+          "col": 9,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 2,
+            "best": 1
+          }
+        },
+        "overrideScope": true,
+        "name": "No. of Nodes DiskPressure",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.node.diskPressure",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 2,
+          "col": 5,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 2,
+            "best": 1
+          }
+        },
+        "overrideScope": true,
+        "name": "No. of Nodes OutOfDisk",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.node.outOfDisk",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 2,
+          "col": 7,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "colorCoding": {
+          "active": true,
+          "thresholds": {
+            "worst": 2,
+            "best": 1
+          }
+        },
+        "overrideScope": true,
+        "name": "No. of Nodes NetworkUnavailable",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "avg",
+            "id": "kubernetes.node.networkUnavailable",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 2,
+          "col": 11,
+          "row": 1
+        },
+        "scope": null
+      },
+      {
+        "overrideScope": false,
+        "name": "CPU Cores Used By NameSpace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "sum",
+            "id": "cpu.cores.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 1,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "CPU Cores Limits By NameSpace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "kubernetes.pod.resourceLimits.cpuCores",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 9,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "CPU Cores Requests By NameSpace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "sum",
+            "id": "kubernetes.pod.resourceRequests.cpuCores",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 5,
+          "row": 15
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Mem Used By NameSpace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "sum",
+            "id": "memory.bytes.used",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 1,
+          "row": 19
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Mem Request By NameSpace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "sum",
+            "id": "kubernetes.pod.resourceRequests.memBytes",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 5,
+          "row": 19
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Mem Limits By NameSpace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeries",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "sum",
+            "id": "kubernetes.pod.resourceLimits.memBytes",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 4,
+          "size_x": 4,
+          "col": 9,
+          "row": 19
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "No. of Deployments",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "max",
+            "id": "kubernetes.namespace.deployment.count",
+            "groupAggregation": "avg"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 3,
+          "col": 1,
+          "row": 28
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "colorCoding": null,
+        "overrideScope": false,
+        "name": "No. of Pods",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "summary",
+        "metrics": [
+          {
+            "propertyName": "v0",
+            "timeAggregation": "min",
+            "id": "kubernetes.pod.status.ready",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 3,
+          "col": 4,
+          "row": 28
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      },
+      {
+        "overrideScope": false,
+        "name": "Container Count by Namespace",
+        "customDisplayOptions": {
+          "yAxisLeftDomain": {
+            "to": null,
+            "from": 0
+          },
+          "yAxisScale": "linear",
+          "yAxisRightDomain": {
+            "to": null,
+            "from": 0
+          },
+          "valueLimit": {
+            "count": 10,
+            "direction": "desc"
+          },
+          "histogram": {
+            "numberOfBuckets": 10
+          },
+          "xAxis": {
+            "to": null,
+            "from": 0
+          }
+        },
+        "showAs": "timeSeriesArea",
+        "metrics": [
+          {
+            "propertyName": "k0",
+            "id": "timestamp"
+          },
+          {
+            "propertyName": "k1",
+            "id": "kubernetes.namespace.name"
+          },
+          {
+            "propertyName": "v0",
+            "timeAggregation": "timeAvg",
+            "id": "container.count",
+            "groupAggregation": "sum"
+          }
+        ],
+        "compareToConfig": null,
+        "gridConfiguration": {
+          "size_y": 2,
+          "size_x": 3,
+          "col": 7,
+          "row": 28
+        },
+        "scope": "kubernetes.namespace.name = \"sysdigcloud\""
+      }
+    ],
+    "shared": false,
+    "schema": 2,
+    "customerId": 1,
+    "name": "Sysdig K8s"
+  }
+}
